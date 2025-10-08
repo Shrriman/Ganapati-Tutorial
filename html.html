@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganapati Tutorial - Premium Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------------- Reset & Base ---------------- */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f4f6f8;color:#333;line-height:1.6;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+button{cursor:pointer;font-family:'Poppins',sans-serif;}
+
+/* ---------------- Header ---------------- */
+header{
+  position:sticky;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:#0B3D91; 
+  color:#fff; 
+  padding:15px 50px;
+  display:flex;
+  justify-content:space-between; /* logo left, nav + hamburger right */
+  align-items:center;             /* vertically center logo and hamburger */
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+header h1{font-size:28px; font-weight:700;}
+nav{display:flex; align-items:center; gap:20px;}
+nav a{color:#fff; font-weight:500; transition:0.3s;}
+nav a:hover{color:#FFD369;}
+
+/* Hamburger */
+.hamburger{
+  display:none; 
+  flex-direction:column; 
+  cursor:pointer; 
+  gap:5px;
+  z-index:1001;
+}
+.hamburger div{
+  width:30px; 
+  height:3px; 
+  background:#fff; 
+  border-radius:2px;
+  transition:0.4s;
+}
+/* Hamburger Animation */
+.hamburger.open div:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open div:nth-child(2){
+  opacity:0;
+}
+.hamburger.open div:nth-child(3){
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Responsiveness */
+@media(max-width:768px){
+  nav{
+    position:absolute;
+    top:65px;
+    right:0;
+    background:#0B3D91;
+    width:200px;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    border-radius:0 0 0 10px;
+    transform:translateX(100%);
+    transition:0.4s;
+  }
+  nav.active{transform:translateX(0);}
+  nav a{display:block; margin:15px 0; color:#fff;}
+  .hamburger{display:flex;}
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero{
+  position:relative; height:90vh; display:flex; justify-content:center; align-items:center;
+  background:linear-gradient(to bottom right, #0F52BA, #3A8DFF, #FFD369);
+  text-align:center; color:#fff;
+}
+.hero h2{font-size:48px; font-weight:700; margin-bottom:20px; animation: fadeIn 2s ease-in-out;}
+.hero p{font-size:22px; margin-bottom:30px; animation: fadeIn 3s ease-in-out;}
+.hero button{
+  background:linear-gradient(45deg,#FFD369,#F2B600); border:none; padding:15px 35px; border-radius:12px; font-weight:600; color:#0B3D91; font-size:18px; transition:0.3s;
+}
+.hero button:hover{transform:scale(1.05); box-shadow:0 8px 20px rgba(252,211,105,0.6);}
+@keyframes fadeIn{0%{opacity:0; transform:translateY(-20px);}100%{opacity:1; transform:translateY(0);}}
+
+/* ---------------- Classes Section ---------------- */
+.classes-section{
+  padding:80px 50px; background:#f4f6f8;
+}
+.classes-section h2{font-size:36px;color:#0B3D91;text-align:center;margin-bottom:50px;}
+.classes{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;
+}
+.class-card{
+  background:#fff; padding:35px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  text-align:center; transition:0.5s; cursor:pointer; border-top:6px solid #FFD369; color:#0B3D91;
+}
+.class-card:hover{
+  transform:translateY(-8px); box-shadow:0 15px 40px rgba(255,195,105,0.5);
+  background:linear-gradient(135deg,#FFD369,#FF8C42,#0F52BA); /* Attractive gradient */
+  color:#fff;
+}
+.class-card h3,.class-card p{transition:0.5s;}
+
+/* ---------------- Principal Message ---------------- */
+.principal-message{
+  background:linear-gradient(to right,#D0EFFF,#A2DFFF); border-left:6px solid #0B3D91; padding:50px 40px; margin:60px 50px; border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1); transition:0.3s;
+}
+.principal-message h3{color:#0B3D91; font-size:28px; margin-bottom:20px; font-weight:700;}
+.principal-message p{color:#0B3D91; font-size:18px; line-height:1.8;}
+.principal-message:hover{transform:translateY(-5px);}
+
+/* ---------------- Footer ---------------- */
+footer{
+  background:#081A40; color:#fff; text-align:center; padding:50px 20px;
+}
+footer p{margin:6px 0; font-size:14px;}
+footer a{color:#FFD369; margin:0 10px; font-weight:500; transition:0.3s;}
+footer a:hover{color:#fff;}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:768px){
+  .hero h2{font-size:36px;}
+  .hero p{font-size:18px;}
+  .classes-section{padding:60px 20px;}
+  .principal-message{margin:40px 20px; padding:30px 20px;}
+}
+@media(max-width:480px){
+  header{flex-direction:column;text-align:center;}
+  nav a{margin:10px 10px 0 10px;}
+  .hero h2{font-size:28px;}
+}
+
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:#0B3D91; 
+  color:#fff; 
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between; /* logo left, nav right */
+  align-items:center;             /* vertically center logo & hamburger */
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  flex-wrap:wrap; /* allow wrapping if needed */
+}
+header h1{
+  font-size:24px;
+  font-weight:700;
+  white-space:nowrap; /* prevent line break */
+}
+
+/* Mobile Adjustments */
+@media(max-width:480px){
+  header{
+    padding:15px 20px;
+  }
+  header h1{
+    font-size:20px; /* smaller text */
+  }
+  nav{
+    top:55px; /* slightly adjust slide-down */
+    width:180px;
+  }
+  .hamburger div{
+    width:25px; height:3px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+<h1>Ganapati Tutorial</h1>
+<nav id="nav-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+<div class="hamburger" id="hamburger">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<h2>Welcome to Ganapati Tutorial</h2>
+<p>Explore world-class tutorials for every class</p>
+<button onclick="document.querySelector('.classes-section').scrollIntoView({behavior:'smooth'})">Explore Classes</button>
+</div>
+</section>
+
+<!-- Classes Section -->
+<section class="classes-section">
+<h2>Our Classes</h2>
+<div class="classes">
+  <div class="class-card" onclick="window.location.href='class8.html'">
+    <h3>Class 8</h3>
+    <p>Click to explore tutorials & notes</p>
+  </div>
+  <div class="class-card" onclick="window.location.href='class9.html'">
+    <h3>Class 9</h3>
+    <p>Click to explore tutorials & notes</p>
+  </div>
+  <div class="class-card" onclick="window.location.href='class10.html'">
+    <h3>Class 10</h3>
+    <p>Click to explore tutorials & notes</p>
+  </div>
+</div>
+</section>
+
+<!-- Principal Message -->
+<section class="principal-message">
+<h3>Message from the Principal</h3>
+<p>Dear Students, <br><br>
+Welcome to Ganapati Tutorial. Our mission is to provide high-quality learning resources for all students in a structured and professional manner. Explore your class tutorials and notes, and make the most of the available educational content. Wishing you success in all your academic endeavors.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Ganapati Tutorial. All rights reserved.</p>
+<p>Follow us: 
+<a href="#">Facebook</a> | 
+<a href="#">Instagram</a> | 
+<a href="#">YouTube</a>
+</p>
+</footer>
+
+<script>
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav-links');
+hamburger.addEventListener('click', ()=>{
+  nav.classList.toggle('active');
+  hamburger.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
