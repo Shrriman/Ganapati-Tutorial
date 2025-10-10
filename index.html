@@ -1,93 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="or">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganapati Tutorial - Modern Learning</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* 🌟 RESET */
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#e6f0ff,#fdfdfd);color:#1b1b1b;overflow-x:hidden;}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#fdfcfb,#e2d1c3);color:#222;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;}
 button{font-family:'Poppins',sans-serif;cursor:pointer;border:none;}
 
-/* 🌟 HEADER */
+/* HEADER */
 header{
   position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;
-  padding:15px 30px;background:#0033A0;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  padding:15px 30px;background:#ffb600;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.15);
 }
 .logo{display:flex;align-items:center;gap:10px;}
-.logo img{width:55px;height:55px;border-radius:50%;border:2px solid #FFD369;}
-header h1{font-size:1.8rem;font-weight:700;}
+.logo img{width:50px;height:50px;border-radius:50%;border:2px solid #fff;}
+header h1{font-size:1.6rem;font-weight:700;}
 nav{display:flex;gap:20px;}
 nav a{font-weight:500;transition:0.3s;}
-nav a:hover{color:#FFD369;}
+nav a:hover{color:#fff;}
 
-/* 🌟 HAMBURGER */
+/* HAMBURGER */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger div{width:28px;height:3px;background:#fff;border-radius:2px;transition:0.4s;}
 .hamburger.open div:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .hamburger.open div:nth-child(2){opacity:0;}
 .hamburger.open div:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
-
 @media(max-width:768px){
-  nav{position:absolute;top:70px;right:0;background:#0033A0;width:220px;flex-direction:column;padding:20px;transform:translateX(100%);transition:0.3s;}
+  nav{position:absolute;top:70px;right:0;background:#ffb600;width:220px;flex-direction:column;padding:20px;transform:translateX(100%);transition:0.3s;}
   nav.active{transform:translateX(0);}
   nav a{margin:10px 0;color:#fff;}
   .hamburger{display:flex;}
 }
 
-/* 🌟 HERO SECTION */
+/* HERO SECTION */
 .hero{
   height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-  background:linear-gradient(135deg,#0033A0,#007BFF,#FFD369);color:#fff;position:relative;overflow:hidden;
+  background:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1050&q=80') center/cover;
+  color:#fff;position:relative;overflow:hidden;
 }
 .hero::after{
   content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,0.15);
   border-radius:50%;bottom:-80px;right:-80px;filter:blur(80px);
 }
-.hero h2{font-size:3rem;font-weight:700;margin-bottom:15px;animation:fadeInUp 1.5s ease;}
-.hero p{font-size:1.2rem;max-width:600px;animation:fadeInUp 2s ease;}
-.hero button{margin-top:25px;padding:15px 35px;background:#FFD369;color:#0033A0;border-radius:50px;font-size:1rem;font-weight:600;transition:0.3s;}
+.hero h2{font-size:3rem;font-weight:700;margin-bottom:15px;animation:fadeInUp 1.5s ease;text-shadow:2px 2px 6px rgba(0,0,0,0.5);}
+.hero p{font-size:1.2rem;max-width:600px;margin-bottom:20px;text-shadow:1px 1px 3px rgba(0,0,0,0.4);}
+.hero button{padding:15px 35px;background:#fff;color:#ff7a00;border-radius:50px;font-size:1rem;font-weight:600;transition:0.3s;}
 .hero button:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(255,211,105,0.5);}
-
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
-/* 🌟 CLASSES SECTION */
+/* CLASSES SECTION */
 .classes-section{padding:80px 20px;text-align:center;}
-.classes-section h2{font-size:2.5rem;color:#0033A0;margin-bottom:40px;}
+.classes-section h2{font-size:2.5rem;color:#ff7a00;margin-bottom:40px;}
 .classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 .class-card{
   background:#fff;padding:40px 25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.4s;cursor:pointer;position:relative;overflow:hidden;border-top:6px solid #FFD369;
+  transition:0.4s;cursor:pointer;position:relative;overflow:hidden;border-top:6px solid #ff7a00;
 }
 .class-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(0,0,0,0.15);}
-.class-card h3{font-size:1.5rem;color:#0033A0;margin-bottom:10px;}
+.class-card h3{font-size:1.5rem;color:#ff7a00;margin-bottom:10px;}
 .class-card p{font-size:1rem;color:#555;}
 .class-card::after{
-  content:'';position:absolute;width:80px;height:80px;background:#FFD369;top:-40px;right:-40px;border-radius:50%;opacity:0.3;
+  content:'';position:absolute;width:80px;height:80px;background:#ffb600;top:-40px;right:-40px;border-radius:50%;opacity:0.3;
 }
 
-/* 🌟 PRINCIPAL MESSAGE */
+/* PRINCIPAL MESSAGE */
 .principal-message{
-  margin:70px auto;padding:60px 30px;max-width:900px;background:#E9F4FF;border-left:8px solid #0033A0;
+  margin:70px auto;padding:60px 30px;max-width:900px;background:#ffe7b3;border-left:8px solid #ff7a00;
   border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
-.principal-message h3{font-size:1.8rem;color:#0033A0;margin-bottom:15px;}
-.principal-message p{font-size:1.1rem;color:#003366;line-height:1.7;}
-.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #FFD369;margin-bottom:20px;}
+.principal-message h3{font-size:1.8rem;color:#ff7a00;margin-bottom:15px;}
+.principal-message p{font-size:1.1rem;color:#333;line-height:1.7;}
+.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #ff7a00;margin-bottom:20px;}
 
-/* 🌟 FOOTER */
+/* FOOTER */
 footer{
-  background:#081A40;color:#fff;text-align:center;padding:50px 20px;margin-top:60px;
+  background:#222;color:#fff;text-align:center;padding:50px 20px;margin-top:60px;
 }
 footer p{margin:8px 0;font-size:15px;}
-footer a{color:#FFD369;margin:0 8px;font-weight:500;transition:0.3s;}
+footer a{color:#ffb600;margin:0 8px;font-weight:500;transition:0.3s;}
 footer a:hover{color:#fff;}
 
-/* 🌟 RESPONSIVE */
+/* RESPONSIVE */
 @media(max-width:480px){
   .hero h2{font-size:2rem;}
   .hero p{font-size:1rem;}
@@ -107,14 +106,12 @@ footer a:hover{color:#fff;}
     <a href="#about">Principal</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="hamburger" id="hamburger">
-    <div></div><div></div><div></div>
-  </div>
+  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
 </header>
 
 <section class="hero" id="home">
-  <h2>Welcome to Ganapati Tutorial</h2>
-  <p>Where learning is simple, enjoyable, and accessible for every student — Class 8, 9 & 10.</p>
+  <h2>ଶିକ୍ଷା ସବୁଙ୍କ ପାଇଁ • Education for All</h2>
+  <p>Class 8 • Class 9 • Class 10 — Easy notes, simple explanations, and guidance for everyone.</p>
   <button onclick="document.querySelector('.classes-section').scrollIntoView({behavior:'smooth'})">Explore Classes</button>
 </section>
 
@@ -123,15 +120,15 @@ footer a:hover{color:#fff;}
   <div class="classes">
     <div class="class-card" onclick="window.location.href='class8.html'">
       <h3>Class 8</h3>
-      <p>Learn and explore with easy-to-understand notes.</p>
+      <p>ସହଜ ଓ ମଜାଦାର ନୋଟ୍ସ — ପଢିବାକୁ ସହଜ ଏବଂ ଆକର୍ଷଣୀୟ।</p>
     </div>
     <div class="class-card" onclick="window.location.href='class9.html'">
       <h3>Class 9</h3>
-      <p>Concept-based tutorials for deeper understanding.</p>
+      <p>ପ୍ରତିଟି ଅଧ୍ୟାୟ ଭିତରେ ନିଜସ୍ୱ ବିବରଣୀ ଓ ଉଦାହରଣ।</p>
     </div>
     <div class="class-card" onclick="window.location.href='class10.html'">
       <h3>Class 10</h3>
-      <p>Comprehensive resources to boost your exam preparation.</p>
+      <p>ଫର୍ମୁଲା, ଗ୍ରାଫ ଓ ପ୍ରଶ୍ନ ଉତ୍ତର ସହିତ — ପରୀକ୍ଷା ପାଇଁ ତିଆରି।</p>
     </div>
   </div>
 </section>
@@ -139,9 +136,9 @@ footer a:hover{color:#fff;}
 <section class="principal-message" id="about">
   <center>
     <img src="principal.jpg" class="principal-img" alt="Principal">
-    <h3>Message from the Principal</h3>
+    <h3>Principal - ଶ୍ରୀ ଜଗନ୍ନାଥ ପ୍ରଧାନ</h3>
   </center>
-  <p>Dear Students,<br><br>Welcome to Ganapati Tutorial! We are dedicated to making learning easy and effective for everyone. Whether you're revising important topics or learning something new, our goal is to help you understand and enjoy every subject. Keep exploring and always believe in your potential. Together, we’ll make learning a joyful experience!</p>
+  <p>ପ୍ରିୟ ଶିକ୍ଷାର୍ଥୀମାନେ, ଶିକ୍ଷା ହେଉଛି ଜୀବନର ଭିତ। ସହଜ ଓ ସ୍ପଷ୍ଟ ଭାବରେ ଜ୍ଞାନ ଗ୍ରହଣ କର। Ganapati Tutorial ତୁମ ପାଇଁ ସଦା ପ୍ରସ୍ତୁତ।</p>
 </section>
 
 <footer id="contact">
