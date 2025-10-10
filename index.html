@@ -108,6 +108,20 @@ footer a:hover{color:#fff;}
   .hero p{font-size:1rem;}
   .principal-message{padding:40px 20px;}
 }
+
+ @keyframes fadeIn{
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* Blinking effect for sections */
+  .blink {
+    animation: blinkEffect 0.8s ease-in-out 3;
+  }
+
+  @keyframes blinkEffect {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: rgba(255, 223, 0, 0.3); } /* Soft golden highlight */
+  }
 </style>
 </head>
 <body>
@@ -170,9 +184,24 @@ hamburger.addEventListener('click',()=>{
   hamburger.classList.toggle('open');
   nav.classList.toggle('active');
 });
+
+  // Navbar links blinking effect
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').substring(1); // remove #
+      const section = document.getElementById(targetId);
+
+      if(section){
+        section.classList.remove('blink');  // remove if already there
+        void section.offsetWidth;           // force reflow to restart animation
+        section.classList.add('blink');
+      }
+    });
+  });
 </script>
 </body>
 </html>
+
 
 
 
