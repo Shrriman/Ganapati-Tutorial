@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ganapati Tutorial - Fun Learning</title>
+<title>Ganapati Tutorial - Modern Learning</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* 🌈 RESET */
+/* 🌟 RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#FFE6F0,#E0F7FF);color:#1b1b1b;overflow-x:hidden;}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#e6f0ff,#fdfdfd);color:#1b1b1b;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
-img{max-width:100%;border-radius:10px;}
-button{font-family:'Poppins',sans-serif;cursor:pointer;border:none;transition:0.3s;}
+img{max-width:100%;}
+button{font-family:'Poppins',sans-serif;cursor:pointer;border:none;}
 
 /* 🌟 HEADER */
-header{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:15px 30px;background:#FF6FB5;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.15);border-bottom:4px solid #FFD700;}
+header{
+  position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;
+  padding:15px 30px;background:#0033A0;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
 .logo{display:flex;align-items:center;gap:10px;}
-.logo img{width:55px;height:55px;border-radius:50%;border:2px solid #FFD700;}
-header h1{font-size:1.8rem;font-weight:700;color:#fff;text-shadow:2px 2px 5px #FF1493;}
+.logo img{width:55px;height:55px;border-radius:50%;border:2px solid #FFD369;}
+header h1{font-size:1.8rem;font-weight:700;}
 nav{display:flex;gap:20px;}
-nav a{font-weight:600;transition:0.3s;color:#fff;}
-nav a:hover{color:#FFD700;text-shadow:1px 1px 5px #FF69B4;}
+nav a{font-weight:500;transition:0.3s;}
+nav a:hover{color:#FFD369;}
 
 /* 🌟 HAMBURGER */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
@@ -30,45 +33,66 @@ nav a:hover{color:#FFD700;text-shadow:1px 1px 5px #FF69B4;}
 .hamburger.open div:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 
 @media(max-width:768px){
-  nav{position:absolute;top:70px;right:0;background:#FF6FB5;width:220px;flex-direction:column;padding:20px;transform:translateX(100%);transition:0.3s;}
+  nav{position:absolute;top:70px;right:0;background:#0033A0;width:220px;flex-direction:column;padding:20px;transform:translateX(100%);transition:0.3s;}
   nav.active{transform:translateX(0);}
   nav a{margin:10px 0;color:#fff;}
   .hamburger{display:flex;}
 }
 
 /* 🌟 HERO SECTION */
-.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#FFB6C1,#FF69B4,#FFD700);color:#fff;position:relative;overflow:hidden;border-radius:30px;margin:10px;box-shadow:0 10px 40px rgba(255,105,180,0.4);}
-.hero::after{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,0.2);border-radius:50%;bottom:-80px;right:-80px;filter:blur(80px);}
-.hero h2{font-size:3rem;font-weight:700;margin-bottom:15px;animation:fadeInUp 1.5s ease;text-shadow:2px 2px 8px #FF1493;}
+.hero{
+  height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  background:linear-gradient(135deg,#0033A0,#007BFF,#FFD369);color:#fff;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,0.15);
+  border-radius:50%;bottom:-80px;right:-80px;filter:blur(80px);
+}
+.hero h2{font-size:3rem;font-weight:700;margin-bottom:15px;animation:fadeInUp 1.5s ease;}
 .hero p{font-size:1.2rem;max-width:600px;animation:fadeInUp 2s ease;}
-.hero button{margin-top:25px;padding:15px 35px;background:#FFD700;color:#FF1493;border-radius:50px;font-size:1rem;font-weight:600;transition:0.3s;}
-.hero button:hover{transform:scale(1.1);box-shadow:0 8px 25px rgba(255,215,0,0.5);}
+.hero button{margin-top:25px;padding:15px 35px;background:#FFD369;color:#0033A0;border-radius:50px;font-size:1rem;font-weight:600;transition:0.3s;}
+.hero button:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(255,211,105,0.5);}
+
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
 /* 🌟 CLASSES SECTION */
 .classes-section{padding:80px 20px;text-align:center;}
-.classes-section h2{font-size:2.5rem;color:#FF1493;margin-bottom:40px;text-shadow:1px 1px 5px #FFD700;}
+.classes-section h2{font-size:2.5rem;color:#0033A0;margin-bottom:40px;}
 .classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.class-card{background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);padding:40px 25px;border-radius:25px;box-shadow:0 10px 35px rgba(255,105,180,0.2);transition:0.4s;cursor:pointer;position:relative;overflow:hidden;border-top:6px solid #FFD700;}
-.class-card:hover{transform:translateY(-10px);box-shadow:0 15px 45px rgba(255,105,180,0.3);}
-.class-card h3{font-size:1.5rem;color:#FF1493;margin-bottom:10px;text-shadow:1px 1px 5px #FFD700;}
+.class-card{
+  background:#fff;padding:40px 25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.4s;cursor:pointer;position:relative;overflow:hidden;border-top:6px solid #FFD369;
+}
+.class-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+.class-card h3{font-size:1.5rem;color:#0033A0;margin-bottom:10px;}
 .class-card p{font-size:1rem;color:#555;}
-.class-card::after{content:'';position:absolute;width:80px;height:80px;background:#FFD700;top:-40px;right:-40px;border-radius:50%;opacity:0.3;}
+.class-card::after{
+  content:'';position:absolute;width:80px;height:80px;background:#FFD369;top:-40px;right:-40px;border-radius:50%;opacity:0.3;
+}
 
 /* 🌟 PRINCIPAL MESSAGE */
-.principal-message{margin:70px auto;padding:60px 30px;max-width:900px;background:rgba(255,240,245,0.85);border-left:8px solid #FF1493;border-radius:25px;box-shadow:0 10px 30px rgba(255,105,180,0.15);backdrop-filter:blur(10px);}
-.principal-message h3{font-size:1.8rem;color:#FF1493;margin-bottom:15px;text-shadow:1px 1px 5px #FFD700;}
-.principal-message p{font-size:1.1rem;color:#FF1493;line-height:1.7;}
-.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #FFD700;margin-bottom:20px;}
+.principal-message{
+  margin:70px auto;padding:60px 30px;max-width:900px;background:#E9F4FF;border-left:8px solid #0033A0;
+  border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.principal-message h3{font-size:1.8rem;color:#0033A0;margin-bottom:15px;}
+.principal-message p{font-size:1.1rem;color:#003366;line-height:1.7;}
+.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #FFD369;margin-bottom:20px;}
 
 /* 🌟 FOOTER */
-footer{background:#FF1493;color:#fff;text-align:center;padding:50px 20px;margin-top:60px;border-top:4px solid #FFD700;}
+footer{
+  background:#081A40;color:#fff;text-align:center;padding:50px 20px;margin-top:60px;
+}
 footer p{margin:8px 0;font-size:15px;}
-footer a{color:#FFD700;margin:0 8px;font-weight:500;transition:0.3s;}
+footer a{color:#FFD369;margin:0 8px;font-weight:500;transition:0.3s;}
 footer a:hover{color:#fff;}
 
 /* 🌟 RESPONSIVE */
-@media(max-width:480px){.hero h2{font-size:2rem;}.hero p{font-size:1rem;}.principal-message{padding:40px 20px;}}
+@media(max-width:480px){
+  .hero h2{font-size:2rem;}
+  .hero p{font-size:1rem;}
+  .principal-message{padding:40px 20px;}
+}
 </style>
 </head>
 <body>
@@ -90,7 +114,7 @@ footer a:hover{color:#fff;}
 
 <section class="hero" id="home">
   <h2>Welcome to Ganapati Tutorial</h2>
-  <p>Where learning is fun, colorful, and simple for every student — Class 8, 9 & 10.</p>
+  <p>Where learning is simple, enjoyable, and accessible for every student — Class 8, 9 & 10.</p>
   <button onclick="document.querySelector('.classes-section').scrollIntoView({behavior:'smooth'})">Explore Classes</button>
 </section>
 
@@ -117,7 +141,7 @@ footer a:hover{color:#fff;}
     <img src="principal.jpg" class="principal-img" alt="Principal">
     <h3>Message from the Principal</h3>
   </center>
-  <p>Dear Students,<br><br>Welcome to Ganapati Tutorial! We are dedicated to making learning colorful, enjoyable, and easy for everyone. Explore, understand, and enjoy every subject with confidence. Together, we make learning a joyful experience!</p>
+  <p>Dear Students,<br><br>Welcome to Ganapati Tutorial! We are dedicated to making learning easy and effective for everyone. Whether you're revising important topics or learning something new, our goal is to help you understand and enjoy every subject. Keep exploring and always believe in your potential. Together, we’ll make learning a joyful experience!</p>
 </section>
 
 <footer id="contact">
