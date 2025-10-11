@@ -60,6 +60,15 @@ nav a:hover{color:#ffd700;text-decoration: underline;}
 .hero button:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(255,211,105,0.5);}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
+/* PRINCIPAL MESSAGE */
+.principal-message{
+  margin:70px auto;padding:60px 30px;max-width:900px;background:#fff5e6;border-left:8px solid #ff7a00;
+  border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.08);opacity:0;transform:translateY(20px);animation:fadeIn 1s 1s forwards;
+}
+.principal-message h3{font-size:1.8rem;color:#ff7a00;margin-bottom:15px;}
+.principal-message p{font-size:1.1rem;color:#333;line-height:1.7;}
+.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #ff7a00;margin-bottom:20px;}
+
 /* CLASSES SECTION */
 .classes-section{padding:80px 20px;text-align:center;}
 .classes-section h2{font-size:2.5rem;color:#ff7a00;margin-bottom:40px;}
@@ -75,15 +84,6 @@ nav a:hover{color:#ffd700;text-decoration: underline;}
   content:'';position:absolute;width:80px;height:80px;background:#ffb600;top:-40px;right:-40px;border-radius:50%;opacity:0.3;
 }
 
-/* PRINCIPAL MESSAGE */
-.principal-message{
-  margin:70px auto;padding:60px 30px;max-width:900px;background:#fff5e6;border-left:8px solid #ff7a00;
-  border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.08);opacity:0;transform:translateY(20px);animation:fadeIn 1s 1s forwards;
-}
-.principal-message h3{font-size:1.8rem;color:#ff7a00;margin-bottom:15px;}
-.principal-message p{font-size:1.1rem;color:#333;line-height:1.7;}
-.principal-img{width:100px;height:100px;border-radius:50%;border:3px solid #ff7a00;margin-bottom:20px;}
-
 /* FOOTER */
 footer{
   background:#222;color:#fff;text-align:center;padding:50px 20px;margin-top:60px;
@@ -91,20 +91,6 @@ footer{
 footer p{margin:8px 0;font-size:15px;}
 footer a{color:#ffb600;margin:0 8px;font-weight:500;transition:0.3s;}
 footer a:hover{color:#fff;}
-
-  @keyframes fadeIn{
-    to{opacity:1;transform:translateY(0);}
-  }
-
-  /* Blinking effect for sections */
-  .blink {
-    animation: blinkEffect 0.8s ease-in-out 3;
-  }
-
-  @keyframes blinkEffect {
-    0%, 100% { background-color: transparent; }
-    50% { background-color: rgba(255, 223, 0, 0.3); } /* Soft golden highlight */
-  }
 
 /* RESPONSIVE */
 @media(max-width:937px){
@@ -129,6 +115,20 @@ footer a:hover{color:#fff;}
   #home img{height:31%;width:auto;top:10%;}
   .principal-message{padding:40px 20px;margin:2px;font-size:1rem;}
 }
+
+@keyframes fadeIn{
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* Blinking effect for sections */
+  .blink {
+    animation: blinkEffect 0.8s ease-in-out 3;
+  }
+
+  @keyframes blinkEffect {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: rgba(255, 223, 0, 0.3); } /* Soft golden highlight */
+  }
 
 </style>
 </head>
@@ -210,6 +210,7 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
 
 
