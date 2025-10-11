@@ -142,11 +142,38 @@ footer p{margin:6px 0;font-size:14px;}
 footer a{color:#ffb600;margin:0 8px;transition:0.3s;}
 footer a:hover{color:#fff;}
 
-/* ---------------- Responsive ---------------- */
+/* RESPONSIVE */
+@media(max-width:937px){
+  nav{position:absolute;top:86px;right:0;background: linear-gradient(0deg, #b8860b, #ffbf00);width:220px;flex-direction:column;padding:20px;transform:translateX(100vw);transition:0.3s;border-radius:0 5%;}
+  nav.active{transform:translateX(50%);}
+  nav a{margin:10px 0;color:#fff;font-size: 1.2rem;}
+  .hamburger{display:flex;}
+}
 @media(max-width:480px){
+  .logo {gap: 4px; margin-left: -7%;}
+  .logo img {width: 48px; height: 48px;}
+  header h1 {font-size: 1.5rem;}
+  .hamburger {margin-right: -7%;}
+  nav{top:78px;transform:translateX(100vw);}
+  nav.active{transform:translateX(50%);}
   .hero h2{font-size:1.5rem;}
   .hero p{font-size:0.9rem;}
 }
+
+@keyframes fadeIn{
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* Blinking effect for sections */
+ .blink {
+  animation: blinkBorder 0.8s ease-in-out 3;
+}
+
+@keyframes blinkBorder {
+  0%, 100% { box-shadow: 0 0 0px gold; }
+  50% { box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.7); }
+}
+
 </style>
 </head>
 <body>
@@ -586,4 +613,5 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
