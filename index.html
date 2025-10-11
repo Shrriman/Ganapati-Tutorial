@@ -122,14 +122,17 @@ footer a:hover{color:#fff;}
 
   /* Blinking effect for sections */
   .blink {
-    animation: blinkEffect 0.8s ease-in-out 3;
-  }
+  animation: blinkBorder 0.8s ease-in-out 3;
+}
 
-  @keyframes blinkEffect {
-    0%, 100% { background-color: transparent; }
-    50% { background-color: rgba(255, 223, 0, 0.3); } /* Soft golden highlight */
+@keyframes blinkBorder {
+  0%, 100% {
+    box-shadow: 0 0 0px gold;
   }
-
+  50% {
+    box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.7);
+  }
+}
 </style>
 </head>
 <body>
@@ -210,6 +213,7 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
 
 
