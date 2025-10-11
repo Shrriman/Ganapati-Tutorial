@@ -194,28 +194,29 @@ hamburger.addEventListener('click',()=>{
   nav.classList.toggle('active');
 });
 
+   // Toggle menu for mobile
+  function toggleMenu(){
+    document.getElementById("menuList").classList.toggle("show");
+  }
+
   // Navbar links blinking effect
   document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault(); // default jump stop
-    const targetId = this.getAttribute('href').substring(1);
-    const section = document.getElementById(targetId);
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').substring(1); // remove #
+      const section = document.getElementById(targetId);
 
-    if(section){
-      // smooth scroll
-      section.scrollIntoView({behavior:'smooth', block:'start'});
-
-      // blink effect
-      section.classList.remove('blink');
-      void section.offsetWidth;
-      section.classList.add('blink');
-    }
+      if(section){
+        section.classList.remove('blink');  // remove if already there
+        void section.offsetWidth;           // force reflow to restart animation
+        section.classList.add('blink');
+      }
+    });
   });
-});
 
 </script>
 </body>
 </html>
+
 
 
 
