@@ -73,7 +73,7 @@ nav a:hover{color:#ffd700;text-decoration: underline;}
 .subject-card::after{content:'';position:absolute;width:60px;height:60px;background:#ffb600;top:-30px;right:-30px;border-radius:50%;opacity:0.3;}
 
 
-.text{background:#ffb700;color:#fff;border:none;padding:10px 39px;font-size:16px;font-weight:600;border-radius:8px;cursor:pointer;margin:5px;transition:0.3s, transform 0.3s;margin-top:5%;}
+.text{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#ffb700;color:#fff;border:none;padding:10px 39px;font-size:16px;font-weight:600;border-radius:8px;cursor:pointer;margin:5px;transition:0.3s, transform 0.3s;margin-top:5%;}
 .text:hover{background:#865000;transform:scale(1.05);}
 
 /* ---------------- Footer ---------------- */
@@ -150,33 +150,32 @@ footer a:hover{color:#fff;}
     <div class="subject-card">
       <h3>Science</h3>
       <p>Physics, Chemistry, Biology simplified notes</p>
-      <button class="text">View</button>
-      <button class="text">Download</button>
+      <center><button class="text">View</button>
+      <button class="text">Download</button></center>
     </div>
     <div class="subject-card">
       <h3>Mathematics</h3>
       <p>Formulas, examples, and solved problems</p>
-      <!-- From Uiverse.io by vinodjangid07 --> 
-<button class="text">View</button>
-      <button class="text">Download</button>
+      <center><button class="text">View</button>
+      <button class="text">Download</button></center>
     </div>
     <div class="subject-card">
       <h3>English</h3>
       <p>Grammar rules, exercises, and literature</p>
-      <button class="text">View</button>
-      <button class="text">Download</button>
+      <center><button class="text">View</button>
+      <button class="text">Download</button></center>
     </div>
     <div class="subject-card">
       <h3>Odia</h3>
       <p>Stories, poems, and grammar</p>
-      <button class="text">View</button>
-      <button class="text">Download</button>
+      <center><button class="text">View</button>
+      <button class="text">Download</button></center>
     </div>
     <div class="subject-card">
       <h3>Social Science</h3>
       <p>History, Geography, Civics notes</p>
-      <button class="text">View</button>
-      <button class="text">Download</button>
+      <center><button class="text">View</button>
+      <button class="text">Download</button></center>
     </div>
   </div>
 </section>
@@ -217,6 +216,7 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
 
 
