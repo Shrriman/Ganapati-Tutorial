@@ -121,18 +121,15 @@ footer a:hover{color:#fff;}
   }
 
   /* Blinking effect for sections */
-  .blink {
+ .blink {
   animation: blinkBorder 0.8s ease-in-out 3;
 }
 
 @keyframes blinkBorder {
-  0%, 100% {
-    box-shadow: 0 0 0px gold;
-  }
-  50% {
-    box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.7);
-  }
+  0%, 100% { box-shadow: 0 0 0px gold; }
+  50% { box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.7); }
 }
+
 </style>
 </head>
 <body>
@@ -200,20 +197,27 @@ hamburger.addEventListener('click',()=>{
 
   // Navbar links blinking effect
   document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href').substring(1); // remove #
-      const section = document.getElementById(targetId);
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // default jump stop
+    const targetId = this.getAttribute('href').substring(1);
+    const section = document.getElementById(targetId);
 
-      if(section){
-        section.classList.remove('blink');  // remove if already there
-        void section.offsetWidth;           // force reflow to restart animation
-        section.classList.add('blink');
-      }
-    });
+    if(section){
+      // smooth scroll
+      section.scrollIntoView({behavior:'smooth', block:'start'});
+
+      // blink effect
+      section.classList.remove('blink');
+      void section.offsetWidth;
+      section.classList.add('blink');
+    }
   });
+});
+
 </script>
 </body>
 </html>
+
 
 
 
