@@ -228,9 +228,23 @@ hamburger.addEventListener('click',()=>{
     });
   });
 
+  // Open PDF in new tab
+  function openPDF(file){
+    window.open(file, '_blank');
+  }
+
+  // Download PDF
+  function downloadPDF(file){
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = file;
+    link.click();
+  }
+
 </script>
 </body>
 </html>
+
 
 
 
