@@ -235,6 +235,83 @@ footer a:hover{color:#fff;}
   </div>
 </section>
 
+<section class="horizontal-gallery">
+  <h2>📸 Ganapati Tutorials Gallery</h2>
+  <div class="scroll-wrapper">
+    <div class="scroll-content">
+      <img src="images/class1.jpg" alt="Class 1">
+      <img src="images/event1.jpg" alt="Event 1">
+      <img src="images/prayer.jpg" alt="Prayer">
+      <img src="images/teacher.jpg" alt="Teacher">
+      <img src="images/award.jpg" alt="Award">
+      <img src="images/friends.jpg" alt="Friends">
+      <img src="images/class2.jpg" alt="Class 2">
+    </div>
+  </div>
+</section>
+
+<style>
+.horizontal-gallery {
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #fffaf0, #ffe8c6);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-gallery h2 {
+  color: #d35400;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(255,140,0,0.4);
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.scroll-content img {
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.scroll-content img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 30px rgba(255,165,0,0.5);
+}
+
+/* Smooth auto-scroll animation */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.scroll-wrapper:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .scroll-content img {
+    height: 140px;
+  }
+  .horizontal-gallery h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+
 <footer id="contact">
   <p>&copy; 2025 Ganapati Tutorial. All Rights Reserved.</p>
   <p>Follow us on <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a></p>
@@ -271,6 +348,7 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
 
 
