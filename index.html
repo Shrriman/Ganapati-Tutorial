@@ -60,6 +60,41 @@ nav a:hover{color:#ffd700;text-decoration: underline;}
 .hero button:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(255,211,105,0.5);}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
+.notice-board{
+  background: linear-gradient(90deg, #b8860b, #ffbf00);
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(255,165,0,0.4);
+  margin: 30px auto;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.notice-board h2{
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.notice-container{
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.3);
+  overflow: hidden;
+}
+
+.notice-container marquee{
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
 /* PRINCIPAL MESSAGE */
 .principal-message{
   margin:70px auto;padding:60px 30px;max-width:900px;background:#fff5e6;border-left:8px solid #ff7a00;
@@ -157,6 +192,19 @@ footer a:hover{color:#fff;}
   <button onclick="document.querySelector('.classes-section').scrollIntoView({behavior:'smooth'})">Explore Classes</button>
 </section>
 
+<!-- NOTICE BOARD -->
+<div class="notice-board">
+  <h2>📢 Latest Notices</h2>
+  <div class="notice-container">
+    <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+      🔸 Admission open for Class 8, 9, and 10 for 2025 session!  
+      🔸 Download the latest notes from the 'Classes' section.  
+      🔸 Regular test series begins from 1st November 2025.  
+      🔸 Follow us on YouTube for daily video lessons!  
+    </marquee>
+  </div>
+</div>
+  
 <section class="principal-message" id="about">
   <center>
     <img src="principal.jpg" class="principal-img" alt="Principal">
@@ -222,6 +270,7 @@ hamburger.addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
 
 
 
